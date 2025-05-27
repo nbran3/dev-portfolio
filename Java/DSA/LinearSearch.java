@@ -8,7 +8,7 @@ public class Main {
 int[] array = {3,4,6,8,9,1,3,7,2};
 
 int index = linearSearch(array,1);
-if(index != 1){
+if(index != -1){
     System.out.println("Element found at index: " + index);
 
 } else{
