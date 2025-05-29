@@ -1,7 +1,7 @@
 // selection sort = search through an array and keep track of the minimum value during each iteration
 // At the end of each iteration, the variables swap
 
-public class Main {
+public class SelectionSort {
 
     public static void main(String[] args) {
         int array[] = {2,9,1,8,5,6,3,4,7};

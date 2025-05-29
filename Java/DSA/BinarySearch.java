@@ -1,9 +1,7 @@
-import java.util.*;
-
-// Binary Search = search algorithm that find the position of a target value within a sorted array. 
+// Binary Search = search algorithm that find the position of a target value within a sorted array.
 // Half of the array is disregarded during each "step"
 
-public class Main {
+public class BinarySearch {
 
     public static void main(String[] args) {
 

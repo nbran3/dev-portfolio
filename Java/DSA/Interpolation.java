@@ -2,7 +2,7 @@
 // "guesses" where a value might be based on calculated results of probing, if probe is incorrect, the
 // search area is narrowed and a new probe is calculated.
 
-public class Main {
+public class Interpolation {
 
     public static void main(String[] args) {
 
