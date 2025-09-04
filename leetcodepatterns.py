@@ -33,6 +33,20 @@ def subarray_sum_fixed(nums: list[int], k:int) -> int:
          largest  = max(largest, window_sum)
     return largest
 
+def maxArea(self, height: List[int]) -> int:
+        result = 0
+        l, r = 0, len(height) - 1
+
+        while l < r:
+            area = (r-l) * min(height[l], height[r])
+            result = max(result, area)
+
+            if height[l] < height[r]:
+                l += 1
+            else:
+                r -= 1
+        return result
+
 ### Sliding Window - There are two window sizes: 1 - Fixed and 2. Dyanmic. Fixed windows are used when finding the max average of any subarray of size k,return the sum of every k-length block, always has k elements, so the window is fixed. For example a fixed window will
 # always have a length of 3, it will never change. Dyanmic windows have windows that can change it can increase or decrease or stay the same. Some examples of using a dynamic array would include finding the longest substring at most K unique characters, what is the 
 # smallest subarray with a sum greater then a target or return the longest windows where a certain rule is valid
