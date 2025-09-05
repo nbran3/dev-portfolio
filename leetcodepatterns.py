@@ -47,9 +47,9 @@ def maxArea(self, height: List[int]) -> int:
                 r -= 1
         return result
 
-### Sliding Window - There are two window sizes: 1 - Fixed and 2. Dyanmic. Fixed windows are used when finding the max average of any subarray of size k,return the sum of every k-length block, always has k elements, so the window is fixed. For example a fixed window will
+### Sliding Window - There are two window sizes: 1 - Fixed and 2. Dynamic. Fixed windows are used when finding the max average of any subarray of size k,return the sum of every k-length block, always has k elements, so the window is fixed. For example, a fixed window will
 # always have a length of 3, it will never change. Dyanmic windows have windows that can change it can increase or decrease or stay the same. Some examples of using a dynamic array would include finding the longest substring at most K unique characters, what is the 
-# smallest subarray with a sum greater then a target or return the longest windows where a certain rule is valid
+# smallest subarray with a sum greater than a target or returning the longest windows where a certain rule is valid
 
 ## Fixed Window
 def fixed_sliding_window(arr, k):
@@ -91,14 +91,13 @@ def dynamic_sliding_window(arr, target):
 ### Binary Search
 def binary_search(arr: list[int], target: int) -> int:
     low = 0
-    high = len(arr) - 1
-
+    high = len(nums) - 1
     while low <= high:
-        middle = (low + high)  // 2
-        if arr[middle] == target:
-            return middle
-        elif arr[middle] < target:
-            low = middle + 1
-        elif arr[middle] > high:
-            high = middle - 1
+        m = low + (high-low)// 2
+        if nums[m] > target:
+            high = m - 1
+        elif nums[m] < target:
+            low = m + 1
+        else:
+            return m
     return - 1
